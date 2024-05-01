@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import trash from "/trash.svg";
 
 function App() {
   // State to store the list of spice items
@@ -34,32 +35,34 @@ function App() {
 
   return (
     <div>
-      <h1>Spice List</h1>
-      <input
-        type="text"
-        placeholder="Enter a new spice"
-        value={input}
-        onChange={handleInputChange}
-      />
-      <button onClick={addSpice}>Add</button>
-      <ul>
-        {spices.map((todo) => (
-          <li key={todo.id}>
-            {todo.text}
-            <button onClick={() => deleteSpice(todo.id)}>Delete</button>
-            <button
+      <h1>Spice Inventory</h1>
+      <div className="search-add-container">
+        <input
+          type="text"
+          placeholder="Enter a new spice"
+          value={input}
+          onChange={handleInputChange}
+        />
+        <button onClick={addSpice} className="spice-button">Add</button>
+      </div>
+      <div className="spices-container">
+        {spices.map((spice) => (
+          <div className="spice-card" key={spice.id}>
+            <h2 className="spice-name">{spice.text}</h2>
+            <button className="spice-button"
               onClick={() => {
-                const newText = prompt("Edit your spice:", todo.text);
+                const newText = prompt("Edit your spice:", spice.text);
                 if (newText) {
-                  editSpice(todo.id, newText);
+                  editSpice(spice.id, newText);
                 }
               }}
             >
               Edit
             </button>
-          </li>
+            <img src={trash} className="delete-button" alt="trash" onClick={() => deleteSpice(spice.id)}/>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
