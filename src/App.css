@@ -3,7 +3,88 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+
  }
+
  div {
   text-align: center;
+  height: 100%;
+  width: 100%;
  }
+
+ h1{
+  text-align: center;
+  color: #FA9D00;
+}
+
+ .search-add-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: auto;
+  align-items: center;
+}
+
+.search-add-container input{
+  width: 43%;
+  height: 5vw;
+  border: 2px solid #FA9D00;
+  border-radius: 13px;
+  padding-left: 10px;
+  font-size: 3vw;
+  background-color: #f0efe1;
+}  
+
+.spice-button {
+  display: flex;
+  text-decoration: none;
+  font-family: inherit;
+  height: 5vw;
+  border: 2px solid #FA9D00;
+  border-radius: 13px;
+  background-color: #FA9D00;
+  color: white;
+  font-size: 3vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  cursor: pointer;
+  text-align: center; /* Align the text in the center */
+  align-items: center;
+}
+
+.delete-button {
+  display: flex;
+  height: 5vw;
+  margin-left: 1vw;
+  margin-right: 1.5vw;
+  cursor: pointer;
+  text-align: center; /* Align the text in the center */
+  align-items: center;
+}
+
+.spices-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.spice-card{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 60%;
+  margin-bottom: 4vw;
+  border: 2px solid #FA9D00;
+  border-radius: 13px;
+  height: 10vw;
+}
+
+.spice-name{
+  text-align: center;
+  color: #FA9D00;
+  font-size: 4vw;
+  flex-grow: 3;
+}
